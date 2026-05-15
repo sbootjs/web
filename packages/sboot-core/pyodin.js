@@ -1,0 +1,80 @@
+/**
+ * Public PyOdin browser library facade.
+ *
+ * The underlying files are plain browser scripts, so this facade gives the
+ * frontend a single stable namespace without changing the existing classes.
+ */
+(function exposePyOdin(global) {
+    global.PyOdin = {
+        DeviceInfo,
+        UsbDevice,
+        DownloadEngine,
+        FirmwareItem,
+        FirmwareData,
+        FirmwareParser,
+        PitEntry,
+        PitParser,
+        OdinFlasher,
+        SBootDevice,
+        SBootPacketReader,
+        SBootPacketWriter,
+        SBootProtocol,
+        SBootTransport,
+        utils: {
+            arrayEquals,
+            arrayStartsWith,
+            bytesToHex,
+            checkWebUSBSupport,
+            concatUint8Arrays,
+            createZeroBuffer,
+            detectCompressionType,
+            detectFileType,
+            formatBytes,
+            hexToBytes,
+            log,
+            numberToLE,
+            readString,
+            showError,
+            showSuccess,
+            sleep,
+            structPack,
+            structUnpack,
+            updateProgress
+        },
+        constants: {
+            SAMSUNG_VENDOR_ID,
+            SAMSUNG_DOWNLOAD_MODE_PIDS,
+            USB_ENDPOINT_OUT,
+            USB_ENDPOINT_IN,
+            USB_PACKET_SIZE,
+            USB_MAX_PACKET_SIZE,
+            OdinCommand,
+            OdinPacketType,
+            ODIN_PROTOCOL_VERSION,
+            ODIN_MAGIC,
+            ODIN_PACKET_HEADER_SIZE,
+            TAR_SIGNATURE,
+            GZIP_SIGNATURE,
+            LZ4_SIGNATURE,
+            MD5_FILE_EXTENSION,
+            PIT_MAGIC,
+            PIT_HEADER_SIZE,
+            PIT_ENTRY_SIZE,
+            TransferMode,
+            DeviceResponse,
+            TIMEOUT_CONNECT,
+            TIMEOUT_HANDSHAKE,
+            TIMEOUT_TRANSFER,
+            TIMEOUT_WRITE,
+            TIMEOUT_READ,
+            BUFFER_SIZE,
+            MAX_FIRMWARE_SIZE,
+            PartitionType,
+            PARTITION_NAME_MAP,
+            FIRMWARE_EXTENSIONS,
+            MD5_HASH_SIZE,
+            SHA256_HASH_SIZE,
+            PROGRESS_UPDATE_INTERVAL
+        }
+    };
+})(window);

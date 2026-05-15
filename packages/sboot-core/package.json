@@ -1,0 +1,19 @@
+{
+  "name": "@sboot/core",
+  "version": "1.0.0",
+  "description": "Browser Samsung SBoot/Odin WebUSB library",
+  "license": "MIT",
+  "type": "module",
+  "main": "./index.js",
+  "module": "./index.js",
+  "exports": {
+    ".": "./index.js"
+  },
+  "files": [
+    "*.js"
+  ],
+  "dependencies": {
+    "pako": "^2.1.0",
+    "spark-md5": "^3.0.2"
+  }
+}
