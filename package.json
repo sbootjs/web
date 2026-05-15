@@ -22,7 +22,7 @@
   "author": "PyOdin Developers",
   "license": "MIT",
   "dependencies": {
-    "@sboot/core": "file:packages/sboot-core"
+    "@sboot/core": "file:../sboot-core*"
   },
   "devDependencies": {
     "vite": "^5.4.0"
